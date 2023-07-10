@@ -1,0 +1,9 @@
+procedure IsPalindrome(word: string) returns boolean
+    if length(word) <= 1 then
+        return true
+    else if word[1] = word[length(word)] then
+        return IsPalindrome(substring(word, 2, length(word) - 1))
+    else
+        return false
+    end if
+end procedure
